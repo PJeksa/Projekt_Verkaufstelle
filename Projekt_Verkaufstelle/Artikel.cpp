@@ -1,22 +1,21 @@
 #include "Artikel.h"
 
-Artikel::Artikel(string name, int preis, int bestand)
+Artikel::Artikel(string strName, int iPreisEK, int pPreisVK, int iBestand, long lEAN)
 {
-	strName = name;
-	iPreis = preis;
-	iBestand = bestand;
+	this->strName = strName;
+	this->iPreisEK = iPreisEK;
+	this->iPreisVK = iPreisVK;
+	this->iBestand = iBestand;
+	this->lEAN = lEAN;
 }
 
 Artikel::Artikel(const Artikel &toCopy)
 {
 	strName = toCopy.strName;
-	iPreis = toCopy.iPreis;
+	iPreisEK = toCopy.iPreisEK;
+	iPreisVK = toCopy.iPreisVK;
 	iBestand = toCopy.iBestand;
-}
-
-Artikel::~Artikel()
-{
-
+	lEAN = toCopy.lEAN;
 }
 
 string Artikel::getName()
@@ -29,14 +28,24 @@ void Artikel::setName(string newName)
 	strName = newName;
 }
 
-int Artikel::getPreis()
+int Artikel::getPreisEK()
 {
-	return iPreis;
+	return iPreisEK;
 }
 
-void Artikel::setPreis(int newPreis)
+void Artikel::setPreisEK(int iPreisEK)
 {
-	iPreis = newPreis;
+	this->iPreisEK = iPreisEK;
+}
+
+int Artikel::getPreisVK()
+{
+	return iPreisVK;
+}
+
+void Artikel::setPreisVK(int iPreisVK)
+{
+	this->iPreisVK = iPreisVK;
 }
 
 int Artikel::getBestand()
@@ -49,14 +58,17 @@ void Artikel::setBestand(int newBestand)
 	iBestand = newBestand;
 }
 
+long Artikel::getEAN()
+{
+	return lEAN;
+}
+
+void Artikel::setEAN(long lEAN)
+{
+	this->lEAN = lEAN;
+}
+
 bool Artikel::operator==(const Artikel &toCompareTo)
 {
-	bool response = true;
-	if (strName != toCompareTo.strName)
-		response = false;
-	else if (iPreis != toCompareTo.iPreis)
-		response = false;
-	else if (iBestand != toCompareTo.iBestand)
-		response = false;
-	return response;
+	return this->lEAN == toCompareTo.lEAN;
 }

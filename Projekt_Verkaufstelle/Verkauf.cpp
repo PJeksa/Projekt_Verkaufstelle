@@ -14,15 +14,15 @@ void Verkauf::setArtikelToSell(Artikel toSell)
 
 void Verkauf::verkaufArtikel(Artikel toSell,int menge)
 {
-	if (lager.isAvailable(toSell, menge))
+	if (lager.isAvailable(toSell))
 	{
-		if (kunde.getGeld() >= (toSell.getPreis() * menge))
+		if (toSell.getBestand <= menge)
 		{
-			lager.
+
 		}
-		else
+		else //zu verkaufende Menge Größer als auf Lager vorhanden -> Rest bestellen.
 		{
-			cout << "Kunde besitzt nicht genug Geld." << endl;
+
 		}
 	}
 	else

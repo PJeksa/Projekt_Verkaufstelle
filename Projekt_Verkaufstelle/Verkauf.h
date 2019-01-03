@@ -14,8 +14,8 @@ private:
 	Kunde kunde;
 
 public:
-	Verkauf();
-	~Verkauf();
+	Verkauf() = default;
+	~Verkauf() = default;
 
 	Artikel getArtikelToSell();
 	void setArtikelToSell(Artikel toSell);

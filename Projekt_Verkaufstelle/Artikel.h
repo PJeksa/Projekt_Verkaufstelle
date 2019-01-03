@@ -8,21 +8,28 @@ class Artikel
 {
 private:
 	string strName;
-	int iPreis;
+	int iPreisEK;
+	int iPreisVK;
 	int iBestand;
+	long lEAN;
 
 public:
-	Artikel(string name, int preis, int bestand);
+	Artikel() = delete;
+	Artikel(string strName, int iPreisEK, int iPreisVK, int iBestand, long lEAN);
 	Artikel(const Artikel &toCopy);
-	~Artikel();
+	~Artikel() = default;
 
 	string getName();
-	void setName(string newName);
-	int getPreis();
-	void setPreis(int newPreis);
+	void setName(string strName);
+	int getPreisEK();
+	void setPreisEK(int iPreisEK);
+	int getPreisVK();
+	void setPreisVK(int iPreisVK);
 	int getBestand();
-	void setBestand(int newBestand);
-
+	void setBestand(int iBestand);
+	long getEAN();
+	void setEAN(long lEAN);
+	   
 	bool operator==(const Artikel &toCompareTo);
 
 };

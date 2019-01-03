@@ -24,10 +24,11 @@ Kunde 3 erhält keinen Rabatt weil wir den nicht mögen.
 
 int main()
 {
-    
+	
 
+	
 
-
+	cout << "main" << endl;
 	cin.sync(); cin.get();
 	return 0;
 }

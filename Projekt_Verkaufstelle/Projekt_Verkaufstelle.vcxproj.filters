@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Projekt_Verkaufstelle.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Kunde.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -28,6 +25,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Verkauf.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

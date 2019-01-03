@@ -1,24 +1,14 @@
 #include "Lager.h"
 
-Lager::Lager()
-{
-	lagerList = list<Artikel>();
-}
-
 Lager::Lager(const Lager &toCopy)
 {
 	lagerList = toCopy.lagerList;
 }
 
-Lager::~Lager()
-{
-
-}
-
-bool Lager::addArtikel(Artikel toAdd)
+bool Lager::addItem(const Artikel &toAdd)
 {
 	bool success = true;
-	if (find(lagerList.begin(), lagerList.end(), toAdd) != lagerList.end()) //Eintrag vorhanden
+	if (isAvailable(toAdd)) //Eintrag vorhanden
 	{
 		cout << "FEHLER: Artikel bereits vorhanden" << endl;
 		success = false;
@@ -30,10 +20,10 @@ bool Lager::addArtikel(Artikel toAdd)
 	return success;
 }
 
-bool Lager::removeArtikelFromLager(Artikel toRemove)
+bool Lager::removeItemFromStorage(const Artikel &toRemove)
 {
 	bool success = true;
-	if (find(lagerList.begin(), lagerList.end(), toRemove) != lagerList.end()) //Eintrag vorhanden
+	if (isAvailable(toRemove)) //Eintrag vorhanden
 	{
 		lagerList.remove(toRemove);
 	}
@@ -45,32 +35,12 @@ bool Lager::removeArtikelFromLager(Artikel toRemove)
 	return success;
 }
 
-bool Lager::isAvailable(Artikel toCheck, int menge)
+bool Lager::isAvailable(const Artikel &toCheck)
 {
 	bool status = false;
 	if (find(lagerList.begin(), lagerList.end(), toCheck) != lagerList.end()) 
 	{
-		if (toCheck.getBestand >= menge)
-			status = true;
+		status = true;
 	}
-	return status;
-}
-
-bool Lager::takeFromLager(Artikel toTake, int menge)
-{
-	bool status = true;
-	if (isAvailable(toTake, menge))
-	{
-		for (list<Artikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
-		{
-			if (toTake == *i)
-			{
-				
-			}
-		}
-	}
-
-
-
 	return status;
 }
