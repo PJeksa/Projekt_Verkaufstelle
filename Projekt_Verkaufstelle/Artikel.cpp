@@ -1,11 +1,10 @@
 #include "Artikel.h"
 
-Artikel::Artikel(string strName, int iPreisEK, int pPreisVK, int iBestand, long lEAN)
+Artikel::Artikel(string strName, int iPreisEK, int pPreisVK, long lEAN)
 {
 	this->strName = strName;
 	this->iPreisEK = iPreisEK;
 	this->iPreisVK = iPreisVK;
-	this->iBestand = iBestand;
 	this->lEAN = lEAN;
 }
 
@@ -14,7 +13,6 @@ Artikel::Artikel(const Artikel &toCopy)
 	strName = toCopy.strName;
 	iPreisEK = toCopy.iPreisEK;
 	iPreisVK = toCopy.iPreisVK;
-	iBestand = toCopy.iBestand;
 	lEAN = toCopy.lEAN;
 }
 

@@ -154,6 +154,7 @@
     <ClCompile Include="Artikel.cpp" />
     <ClCompile Include="Kunde.cpp" />
     <ClCompile Include="Lager.cpp" />
+    <ClCompile Include="LagerArtikel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Verkauf.cpp" />
   </ItemGroup>
@@ -162,6 +163,7 @@
     <ClInclude Include="Einkauf.h" />
     <ClInclude Include="Kunde.h" />
     <ClInclude Include="Lager.h" />
+    <ClInclude Include="LagerArtikel.h" />
     <ClInclude Include="Verkauf.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

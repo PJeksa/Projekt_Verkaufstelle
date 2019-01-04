@@ -12,11 +12,11 @@ void Verkauf::setArtikelToSell(Artikel toSell)
 	aToSell = toSell;
 }
 
-void Verkauf::verkaufArtikel(Artikel toSell,int menge)
+void Verkauf::verkaufArtikel(LagerArtikel toSell,int menge)
 {
 	if (lager.isAvailable(toSell))
 	{
-		if (toSell.getBestand <= menge)
+		if (toSell.getBestand() <= menge)
 		{
 
 		}

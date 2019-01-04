@@ -6,18 +6,17 @@ using namespace std;
 
 class Artikel
 {
-private:
+protected:
 	string strName;
 	int iPreisEK;
 	int iPreisVK;
-	int iBestand;
 	long lEAN;
 
 public:
 	Artikel() = delete;
-	Artikel(string strName, int iPreisEK, int iPreisVK, int iBestand, long lEAN);
+	Artikel(string strName, int iPreisEK, int iPreisVK, long lEAN);
 	Artikel(const Artikel &toCopy);
-	~Artikel() = default;
+	virtual ~Artikel() = default;
 
 	string getName();
 	void setName(string strName);
@@ -25,8 +24,6 @@ public:
 	void setPreisEK(int iPreisEK);
 	int getPreisVK();
 	void setPreisVK(int iPreisVK);
-	int getBestand();
-	void setBestand(int iBestand);
 	long getEAN();
 	void setEAN(long lEAN);
 	   

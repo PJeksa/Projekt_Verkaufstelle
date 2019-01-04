@@ -1,9 +1,9 @@
 #ifndef _VERKAUF_H_
 #define _VERKAUF_H_
 
-#include "Artikel.h"
 #include "Lager.h"
 #include "Kunde.h"
+#include "LagerArtikel.h"
 
 
 class Verkauf
@@ -21,7 +21,7 @@ public:
 	void setArtikelToSell(Artikel toSell);
 
 
-	void verkaufArtikel(Artikel toSell, int menge);
+	void verkaufArtikel(LagerArtikel toSell, int menge);
 };
 
 
