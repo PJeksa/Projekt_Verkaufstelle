@@ -46,15 +46,6 @@ void Artikel::setPreisVK(int iPreisVK)
 	this->iPreisVK = iPreisVK;
 }
 
-int Artikel::getBestand()
-{
-	return iBestand;
-}
-
-void Artikel::setBestand(int newBestand)
-{
-	iBestand = newBestand;
-}
 
 long Artikel::getEAN()
 {
