@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Artikel.h"
 #include "Kunde.h"
-#include "Lager.h"
+#include "Storage.h"
 
 /*
 Baue eine kleine Warenwirtschaft mit Lager und Verkauf und Einkauf.
@@ -24,9 +24,32 @@ Kunde 3 erhält keinen Rabatt weil wir den nicht mögen.
 
 int main()
 {
-	
+	Artikel a1 = Artikel("Artikel1", 1, 2, 123456789);
+	Artikel a2 = Artikel("Artikel2", 2, 3, 213456798);
+	Artikel a3 = Artikel("Artikel3", 3, 5, 321456845);
 
+	Storage s1 = Storage();
+	s1.printOutStorage();
 	
+	s1.addItem(a1);
+	s1.addItem(a2);
+	s1.addItem(a3);
+
+	s1.printOutStorage();
+
+	s1.removeItem(a2);
+
+	s1.printOutStorage();
+
+	s1.removeItem(a2);
+
+	s1.printOutStorage();
+
+	a2 = a3;
+
+	s1.removeItem(a2);
+
+	s1.printOutStorage();
 
 	cout << "main" << endl;
 	cin.sync(); cin.get();

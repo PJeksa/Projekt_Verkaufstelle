@@ -1,6 +1,6 @@
 #include "Artikel.h"
 
-Artikel::Artikel(string strName, int iPreisEK, int pPreisVK, long lEAN)
+Artikel::Artikel(string strName, int iPreisEK, int iPreisVK, long lEAN)
 {
 	this->strName = strName;
 	this->iPreisEK = iPreisEK;

@@ -1,17 +1,15 @@
 #ifndef _VERKAUF_H_
 #define _VERKAUF_H_
 
-#include "Lager.h"
-#include "Kunde.h"
-#include "LagerArtikel.h"
+#include "Storage.h"
+#include "Artikel.h"
 
 
 class Verkauf
 {
 private:
 	Artikel aToSell;
-	Lager lager;
-	Kunde kunde;
+	Storage lager;
 
 public:
 	Verkauf() = default;
@@ -21,7 +19,7 @@ public:
 	void setArtikelToSell(Artikel toSell);
 
 
-	void verkaufArtikel(LagerArtikel toSell, int menge);
+	void verkaufArtikel(Artikel toSell, int menge);
 };
 
 
