@@ -44,3 +44,13 @@ bool Lager::isAvailable(const Artikel &toCheck)
 	}
 	return status;
 }
+
+void Lager::printOutLager()
+{
+	cout << "Lager: " << lagerList.size() << endl;
+	for (list<Artikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
+	{
+		cout << i->getName() << endl;
+	}
+	cout << endl;
+}

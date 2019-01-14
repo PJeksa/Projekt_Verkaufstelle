@@ -14,13 +14,3 @@ void LagerArtikel::setBestand(int iBestand)
 {
 	this->iBestand = iBestand;
 }
-
-bool LagerArtikel::isLag()
-{
-	return bLag;
-}
-
-void LagerArtikel::setLag(bool bLag)
-{
-	this->bLag = bLag;
-}

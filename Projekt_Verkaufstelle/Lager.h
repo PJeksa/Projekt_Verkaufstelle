@@ -3,7 +3,7 @@
 
 #include <list>
 #include <iostream>
-#include "Artikel.h"
+#include "LagerArtikel.h"
 using namespace std;
 
 
@@ -20,7 +20,7 @@ public:
 	bool addItem(const Artikel &toAdd); //hinzufügen zu Lagerliste
 	bool removeItemFromStorage(const Artikel &toRemove); //Löschen aus lagerListe
 	bool isAvailable(const Artikel &toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
-
+	void printOutLager();
 
 
 

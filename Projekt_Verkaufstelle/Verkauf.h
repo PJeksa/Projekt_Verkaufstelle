@@ -9,19 +9,15 @@
 class Verkauf
 {
 private:
-	Artikel aToSell;
 	Lager lager;
-	Kunde kunde;
 
 public:
-	Verkauf() = default;
+	Verkauf() = delete;
+	Verkauf(Lager lager);
 	~Verkauf() = default;
 
-	Artikel getArtikelToSell();
-	void setArtikelToSell(Artikel toSell);
 
-
-	void verkaufArtikel(LagerArtikel toSell, int menge);
+	void verkaufArtikel(Artikel toSell, int menge);
 };
 
 

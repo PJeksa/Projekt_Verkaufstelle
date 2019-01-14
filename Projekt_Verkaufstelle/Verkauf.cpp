@@ -1,29 +1,15 @@
 #include "Verkauf.h"
 
-
-
-Artikel Verkauf::getArtikelToSell()
+Verkauf::Verkauf(Lager lager)
 {
-	return aToSell;
+	this->lager = lager;
 }
 
-void Verkauf::setArtikelToSell(Artikel toSell)
-{
-	aToSell = toSell;
-}
-
-void Verkauf::verkaufArtikel(LagerArtikel toSell,int menge)
+void Verkauf::verkaufArtikel(Artikel toSell,int menge)
 {
 	if (lager.isAvailable(toSell))
 	{
-		if (toSell.getBestand() <= menge)
-		{
-
-		}
-		else //zu verkaufende Menge Größer als auf Lager vorhanden -> Rest bestellen.
-		{
-
-		}
+		
 	}
 	else
 	{
