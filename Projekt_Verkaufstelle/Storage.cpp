@@ -15,10 +15,10 @@ void Storage::removeItem(const Artikel &toRemove)
 	lagerList.remove(toRemove);
 }
 
-bool Storage::isAvailable(const Artikel &toCheck)
+bool Storage::isAvailable(Artikel &toCheck)
 {
 	bool status = false;
-	if (find(lagerList.begin(), lagerList.end(), toCheck) != lagerList.end()) 
+	if (getNumberOfItem(toCheck) > 0)
 	{
 		status = true;
 	}
@@ -38,4 +38,17 @@ void Storage::printOutStorage()
 int Storage::getNubmerOfItems()
 {
 	return lagerList.size();
+}
+
+int Storage::getNumberOfItem(Artikel& tocheck)
+{
+	int count = 0;
+	for (list<Artikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
+	{
+		if (tocheck == (*i))
+		{
+			count++;
+		}
+	}
+	return count;
 }

@@ -22,8 +22,9 @@ public:
 
 	void addItem(const Artikel &toAdd); //hinzufügen zu Lagerliste
 	void removeItem(const Artikel &toRemove); //Löschen aus lagerListe
-	bool isAvailable(const Artikel &toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
+	bool isAvailable(Artikel &toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
 	void printOutStorage();
+	int getNumberOfItem(Artikel& toCheck);
 	
 
 

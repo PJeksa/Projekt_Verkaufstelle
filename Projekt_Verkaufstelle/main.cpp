@@ -33,13 +33,23 @@ int main()
 	
 	s1.addItem(a1);
 	s1.addItem(a2);
+	s1.addItem(a2);
+	s1.addItem(a2);
+	s1.addItem(a2);
+	s1.addItem(a2);
 	s1.addItem(a3);
 
+	cout << "Is a1 available?: " << s1.isAvailable(a1) << endl;
+	cout << "Is a2 available?: " << s1.isAvailable(a2) << endl;
+	cout << "Is a3 available?: " << s1.isAvailable(a3) << endl;
+
 	s1.printOutStorage();
+	cout << "Number of Item a2: " << s1.getNumberOfItem(a2) << endl;
 
 	s1.removeItem(a2);
 
 	s1.printOutStorage();
+	cout << "Number of Item a2: " << s1.getNumberOfItem(a2) << endl;
 
 	s1.removeItem(a2);
 
