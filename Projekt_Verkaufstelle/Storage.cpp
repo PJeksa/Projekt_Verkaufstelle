@@ -54,9 +54,14 @@ bool Storage::isAvailable(Artikel* toCheck)
 void Storage::printOutStorage()
 {
 	cout << "Lager: " << lagerList.size() << endl;
-	for (auto element : lagerList)
+//	for (auto element : lagerList)
+//	{
+//		cout << element->getName() << endl;
+//	}
+
+	for (list<LagerArtikel*>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
 	{
-		//cout << element->getName() << endl;
+		cout << (*i)->getName() << endl;
 	}
 	cout << endl;
 }

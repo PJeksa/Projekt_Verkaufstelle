@@ -27,6 +27,8 @@ public:
 	void setPreisVK(int iPreisVK);
 	long getEAN();
 	void setEAN(long lEAN);
+
+	string toString();
 	   
 	bool operator==(const Artikel &toCompareTo);
 };

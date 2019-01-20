@@ -14,3 +14,10 @@ void LagerArtikel::setBestand(int iBestand)
 {
 	this->iBestand = iBestand;
 }
+
+string LagerArtikel::toString()
+{
+	string response = Artikel::toString();
+	response += "\nBestand" + this->getBestand();
+	return response;
+}

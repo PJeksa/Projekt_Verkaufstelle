@@ -29,14 +29,18 @@ int main()
 	Artikel a1 = Artikel("Artikel1", 1, 45, 1234567);
 	Artikel a2 = Artikel("Artikel2", 2, 3, 1234569);
 
+	cout << a1.toString() << endl;
+
 	Storage l1 = Storage();
 
-	l1.addItem(&a1);
+	//l1.addItem(&a1);
 	l1.printOutStorage();
 
 
 	LagerArtikel la1 = LagerArtikel("LagerArtikel1", 1, 2, 123456787, 0);
 	LagerArtikel l21 = LagerArtikel("LagerArtikel2", 2, 3, 123816787, 0);
+
+	//cout << la1.toString() << endl;
 
 
 	l1.printOutStorage();

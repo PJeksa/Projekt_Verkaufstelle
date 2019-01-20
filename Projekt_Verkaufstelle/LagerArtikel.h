@@ -16,7 +16,7 @@ public:
 
 	int getBestand();
 	void setBestand(int iBestand);
-
+	string toString();
 };
 
 

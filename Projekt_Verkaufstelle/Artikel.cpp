@@ -57,6 +57,19 @@ void Artikel::setEAN(long lEAN)
 	this->lEAN = lEAN;
 }
 
+string Artikel::toString()
+{
+	string response = "";
+	response += "Name: " + getName() + "\n";
+	response += "PreisEK: " + getPreisEK();
+	response += "\n";
+	response += "PreisVK: " + getPreisVK();
+	response += "\n";
+	response += "EAN: " + getEAN();
+	response += "\n";
+	return response;
+}
+
 bool Artikel::operator==(const Artikel &toCompareTo)
 {
 	return this->lEAN == toCompareTo.lEAN;
