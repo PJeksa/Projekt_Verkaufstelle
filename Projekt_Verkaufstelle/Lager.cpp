@@ -20,6 +20,12 @@ bool Lager::addItem(LagerArtikel* toAdd)
 	return success;
 }
 
+bool Lager::addItem(Artikel * toAdd)
+{
+	LagerArtikel tmp = LagerArtikel(toAdd->getName(), toAdd->getPreisEK(), toAdd->getPreisVK(), toAdd->getEAN(), 1);
+	return addItem(&tmp);
+}
+
 bool Lager::removeItemFromStorage(LagerArtikel* toRemove)
 {
 	bool success = true;
@@ -50,7 +56,7 @@ void Lager::printOutLager()
 	cout << "Lager: " << lagerList.size() << endl;
 	for (auto element : lagerList)
 	{
-
+		//cout << element->getName() << endl;
 	}
 	cout << endl;
 }

@@ -26,20 +26,19 @@ Kunde 3 erhält keinen Rabatt weil wir den nicht mögen.
 
 int main()
 {
-	Artikel a1 = Artikel("Artikel1", 1, 2, 1234567);
+	Artikel a1 = Artikel("Artikel1", 1, 45, 1234567);
 	Artikel a2 = Artikel("Artikel2", 2, 3, 1234569);
 
 	Lager l1 = Lager();
 
-	l1.addItem(a1);
-	l1.addItem(a2);
+	l1.addItem(&a1);
 	l1.printOutLager();
 
 
 	LagerArtikel la1 = LagerArtikel("LagerArtikel1", 1, 2, 123456787, 0);
 	LagerArtikel l21 = LagerArtikel("LagerArtikel2", 2, 3, 123816787, 0);
 
-	l1.addItem(la1);
+
 	l1.printOutLager();
 
 

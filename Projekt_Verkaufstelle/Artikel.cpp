@@ -1,6 +1,6 @@
 #include "Artikel.h"
 
-Artikel::Artikel(string strName, int iPreisEK, int pPreisVK, long lEAN)
+Artikel::Artikel(string strName, int iPreisEK, int iPreisVK, long lEAN)
 {
 	this->strName = strName;
 	this->iPreisEK = iPreisEK;
@@ -61,8 +61,3 @@ bool Artikel::operator==(const Artikel &toCompareTo)
 {
 	return this->lEAN == toCompareTo.lEAN;
 }
-
-/*LagerArtikel Artikel::operator()(Artikel & toChange)
-{
-	return LagerArtikel(toChange.getName(),toChange.getPreisEK(),toChange.getPreisVK(),toChange.getEAN(),1);
-}*/

@@ -7,7 +7,7 @@ Verkauf::Verkauf(Lager lager)
 
 void Verkauf::verkaufArtikel(Artikel toSell,int menge)
 {
-	if (lager.isAvailable(toSell))
+	if (lager.isAvailable(&toSell))
 	{
 		
 	}

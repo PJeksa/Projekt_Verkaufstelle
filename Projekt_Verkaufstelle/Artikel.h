@@ -8,10 +8,10 @@ using namespace std;
 class Artikel
 {
 protected:
-	string strName;
-	int iPreisEK;
-	int iPreisVK;
-	long lEAN;
+	string strName = "";
+	int iPreisEK = 0;
+	int iPreisVK= 0;
+	long lEAN = 0;
 
 public:
 	Artikel() = delete;
@@ -29,7 +29,6 @@ public:
 	void setEAN(long lEAN);
 	   
 	bool operator==(const Artikel &toCompareTo);
-	//LagerArtikel operator()(Artikel &toChange);
 };
 
 
