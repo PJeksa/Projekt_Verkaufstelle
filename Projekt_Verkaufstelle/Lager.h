@@ -10,16 +10,16 @@ using namespace std;
 class Lager
 {
 private:
-	list<Artikel> lagerList;
+	list<LagerArtikel*> lagerList;
 
 public:
 	Lager() = default;
 	Lager(const Lager &toCopy);
 	~Lager() = default;
 
-	bool addItem(const Artikel &toAdd); //hinzufügen zu Lagerliste
-	bool removeItemFromStorage(const Artikel &toRemove); //Löschen aus lagerListe
-	bool isAvailable(const Artikel &toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
+	bool addItem(LagerArtikel* toAdd); //hinzufügen zu Lagerliste
+	bool removeItemFromStorage(LagerArtikel* toRemove); //Löschen aus lagerListe
+	bool isAvailable(Artikel* toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
 	void printOutLager();
 
 
