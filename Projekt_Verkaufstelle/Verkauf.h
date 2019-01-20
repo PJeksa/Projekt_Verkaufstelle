@@ -1,18 +1,23 @@
 #ifndef _VERKAUF_H_
 #define _VERKAUF_H_
 
-#include "Artikel.h"
-#include "Store.h"
+#include "Lager.h"
+#include "Kunde.h"
+#include "LagerArtikel.h"
 
-class Verkauf : public Store
+
+class Verkauf
 {
 private:
-
+	Lager lager;
 
 public:
-	Verkauf() = default;
+	Verkauf() = delete;
+	Verkauf(Lager lager);
 	~Verkauf() = default;
 
+
+	void verkaufArtikel(Artikel toSell, int menge);
 };
 
 

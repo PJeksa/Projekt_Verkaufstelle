@@ -2,6 +2,7 @@
 #define _ARTIKEL_H
 
 #include <string>
+//#include "LagerArtikel.h"
 using namespace std;
 
 class Artikel
@@ -28,7 +29,7 @@ public:
 	void setEAN(long lEAN);
 	   
 	bool operator==(const Artikel &toCompareTo);
-
+	//LagerArtikel operator()(Artikel &toChange);
 };
 
 

@@ -1,7 +1,9 @@
 #include <iostream>
 #include "Artikel.h"
 #include "Kunde.h"
-#include "Storage.h"
+#include "Lager.h"
+#include "Verkauf.h"
+#include "LagerArtikel.h"
 
 /*
 Baue eine kleine Warenwirtschaft mit Lager und Verkauf und Einkauf.
@@ -24,42 +26,26 @@ Kunde 3 erhält keinen Rabatt weil wir den nicht mögen.
 
 int main()
 {
-	Artikel a1 = Artikel("Artikel1", 1, 2, 123456789);
-	Artikel a2 = Artikel("Artikel2", 2, 3, 213456798);
-	Artikel a3 = Artikel("Artikel3", 3, 5, 321456845);
+	Artikel a1 = Artikel("Artikel1", 1, 2, 1234567);
+	Artikel a2 = Artikel("Artikel2", 2, 3, 1234569);
 
-	Storage s1 = Storage();
-	s1.printOutStorage();
+	Lager l1 = Lager();
+
+	l1.addItem(a1);
+	l1.addItem(a2);
+	l1.printOutLager();
+
+
+	LagerArtikel la1 = LagerArtikel("LagerArtikel1", 1, 2, 123456787, 0);
+	LagerArtikel l21 = LagerArtikel("LagerArtikel2", 2, 3, 123816787, 0);
+
+	l1.addItem(la1);
+	l1.printOutLager();
+
+
+	Verkauf v = Verkauf(l1);
+	v.verkaufArtikel(la1, 0);
 	
-	s1.addItem(a1);
-	s1.addItem(a2);
-	s1.addItem(a2);
-	s1.addItem(a2);
-	s1.addItem(a2);
-	s1.addItem(a2);
-	s1.addItem(a3);
-
-	cout << "Is a1 available?: " << s1.isAvailable(a1) << endl;
-	cout << "Is a2 available?: " << s1.isAvailable(a2) << endl;
-	cout << "Is a3 available?: " << s1.isAvailable(a3) << endl;
-
-	s1.printOutStorage();
-	cout << "Number of Item a2: " << s1.getNumberOfItem(a2) << endl;
-
-	s1.removeItem(a2);
-
-	s1.printOutStorage();
-	cout << "Number of Item a2: " << s1.getNumberOfItem(a2) << endl;
-
-	s1.removeItem(a2);
-
-	s1.printOutStorage();
-
-	a2 = a3;
-
-	s1.removeItem(a2);
-
-	s1.printOutStorage();
 
 	cout << "main" << endl;
 	cin.sync(); cin.get();

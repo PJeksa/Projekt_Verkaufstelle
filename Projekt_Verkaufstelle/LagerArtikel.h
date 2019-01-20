@@ -8,7 +8,6 @@ class LagerArtikel : public Artikel
 {
 private:
 	int iBestand;
-	bool bLag;
 
 public:
 	LagerArtikel() = delete;
@@ -17,8 +16,7 @@ public:
 
 	int getBestand();
 	void setBestand(int iBestand);
-	bool isLag();
-	void setLag(bool bLag);
+
 };
 
 

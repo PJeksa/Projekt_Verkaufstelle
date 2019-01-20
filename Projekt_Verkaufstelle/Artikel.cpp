@@ -61,3 +61,8 @@ bool Artikel::operator==(const Artikel &toCompareTo)
 {
 	return this->lEAN == toCompareTo.lEAN;
 }
+
+/*LagerArtikel Artikel::operator()(Artikel & toChange)
+{
+	return LagerArtikel(toChange.getName(),toChange.getPreisEK(),toChange.getPreisVK(),toChange.getEAN(),1);
+}*/
