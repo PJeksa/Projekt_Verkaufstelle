@@ -5,7 +5,7 @@ Lager::Lager(const Lager &toCopy)
 	lagerList = toCopy.lagerList;
 }
 
-bool Lager::addItem(const Artikel &toAdd)
+bool Lager::addItem(LagerArtikel* toAdd)
 {
 	bool success = true;
 	if (isAvailable(toAdd)) //Eintrag vorhanden
@@ -20,7 +20,13 @@ bool Lager::addItem(const Artikel &toAdd)
 	return success;
 }
 
-bool Lager::removeItemFromStorage(const Artikel &toRemove)
+bool Lager::addItem(Artikel * toAdd)
+{
+	LagerArtikel tmp = LagerArtikel(toAdd->getName(), toAdd->getPreisEK(), toAdd->getPreisVK(), toAdd->getEAN(), 1);
+	return addItem(&tmp);
+}
+
+bool Lager::removeItemFromStorage(LagerArtikel* toRemove)
 {
 	bool success = true;
 	if (isAvailable(toRemove)) //Eintrag vorhanden
@@ -35,7 +41,7 @@ bool Lager::removeItemFromStorage(const Artikel &toRemove)
 	return success;
 }
 
-bool Lager::isAvailable(const Artikel &toCheck)
+bool Lager::isAvailable(Artikel* toCheck)
 {
 	bool status = false;
 	if (find(lagerList.begin(), lagerList.end(), toCheck) != lagerList.end()) 
@@ -48,9 +54,9 @@ bool Lager::isAvailable(const Artikel &toCheck)
 void Lager::printOutLager()
 {
 	cout << "Lager: " << lagerList.size() << endl;
-	for (list<Artikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
+	for (auto element : lagerList)
 	{
-		cout << i->getName() << endl;
+		//cout << element->getName() << endl;
 	}
 	cout << endl;
 }
