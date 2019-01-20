@@ -27,10 +27,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Storage.cpp">
+    <ClCompile Include="Store.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Store.cpp">
+    <ClCompile Include="LagerArtikel.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Storage.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,10 +50,13 @@
     <ClInclude Include="Einkauf.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Storage.h">
+    <ClInclude Include="Store.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Store.h">
+    <ClInclude Include="LagerArtikel.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

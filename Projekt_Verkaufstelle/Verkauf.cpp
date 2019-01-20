@@ -1,6 +1,6 @@
 #include "Verkauf.h"
 
-Verkauf::Verkauf(Lager lager)
+Verkauf::Verkauf(Storage lager)
 {
 	this->lager = lager;
 }

@@ -1,31 +1,30 @@
-#ifndef _LAGER_H_
-#define _LAGER_H_
+#ifndef _Storage_H_
+#define _Storage_H_
 
 #include <list>
 #include <iostream>
-#include "Artikel.h"
+#include "LagerArtikel.h"
 using namespace std;
 
 
 class Storage
 {
 private:
-	list<Artikel> lagerList;
-
-
-	int getNubmerOfItems();
+	list<LagerArtikel*> lagerList;
 
 public:
 	Storage() = default;
 	Storage(const Storage &toCopy);
 	~Storage() = default;
 
-	void addItem(const Artikel &toAdd); //hinzufügen zu Lagerliste
-	void removeItem(const Artikel &toRemove); //Löschen aus lagerListe
-	bool isAvailable(Artikel &toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
+	bool addItem(LagerArtikel* toAdd); //hinzufügen zu Storageliste
+	bool addItem(Artikel* toAdd);
+	bool removeItemFromStorage(LagerArtikel* toRemove); //Löschen aus StorageListe
+	bool isAvailable(Artikel* toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
+
+
 	void printOutStorage();
-	int getNumberOfItem(Artikel& toCheck);
-	
+
 
 
 

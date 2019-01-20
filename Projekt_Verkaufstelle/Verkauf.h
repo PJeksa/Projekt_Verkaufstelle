@@ -1,7 +1,7 @@
 #ifndef _VERKAUF_H_
 #define _VERKAUF_H_
 
-#include "Lager.h"
+#include "Storage.h"
 #include "Kunde.h"
 #include "LagerArtikel.h"
 
@@ -9,11 +9,11 @@
 class Verkauf
 {
 private:
-	Lager lager;
+	Storage lager;
 
 public:
 	Verkauf() = delete;
-	Verkauf(Lager lager);
+	Verkauf(Storage lager);
 	~Verkauf() = default;
 
 

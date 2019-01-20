@@ -5,20 +5,46 @@ Storage::Storage(const Storage &toCopy)
 	lagerList = toCopy.lagerList;
 }
 
-void Storage::addItem(const Artikel &toAdd)
+bool Storage::addItem(LagerArtikel* toAdd)
 {
-	lagerList.push_back(toAdd);
+	bool success = true;
+	if (isAvailable(toAdd)) //Eintrag vorhanden
+	{
+		cout << "FEHLER: Artikel bereits vorhanden" << endl;
+		success = false;
+	}
+	else
+	{
+		lagerList.push_back(toAdd);
+	}
+	return success;
 }
 
-void Storage::removeItem(const Artikel &toRemove)
+bool Storage::addItem(Artikel * toAdd)
 {
-	lagerList.remove(toRemove);
+	LagerArtikel tmp = LagerArtikel(toAdd->getName(), toAdd->getPreisEK(), toAdd->getPreisVK(), toAdd->getEAN(), 1);
+	return addItem(&tmp);
 }
 
-bool Storage::isAvailable(Artikel &toCheck)
+bool Storage::removeItemFromStorage(LagerArtikel* toRemove)
+{
+	bool success = true;
+	if (isAvailable(toRemove)) //Eintrag vorhanden
+	{
+		lagerList.remove(toRemove);
+	}
+	else
+	{
+		cout << "FEHLER: Artikel nicht im Storage vorhanden" << endl;
+		success = false;
+	}
+	return success;
+}
+
+bool Storage::isAvailable(Artikel* toCheck)
 {
 	bool status = false;
-	if (getNumberOfItem(toCheck) > 0)
+	if (find(lagerList.begin(), lagerList.end(), toCheck) != lagerList.end()) 
 	{
 		status = true;
 	}
@@ -27,28 +53,10 @@ bool Storage::isAvailable(Artikel &toCheck)
 
 void Storage::printOutStorage()
 {
-	cout << "Storage: " << this->getNubmerOfItems() << endl;
-	for (list<Artikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
+	cout << "Lager: " << lagerList.size() << endl;
+	for (auto element : lagerList)
 	{
-		cout << i->getName() << endl ;
+		//cout << element->getName() << endl;
 	}
 	cout << endl;
-}
-
-int Storage::getNubmerOfItems()
-{
-	return lagerList.size();
-}
-
-int Storage::getNumberOfItem(Artikel& tocheck)
-{
-	int count = 0;
-	for (list<Artikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
-	{
-		if (tocheck == (*i))
-		{
-			count++;
-		}
-	}
-	return count;
 }
