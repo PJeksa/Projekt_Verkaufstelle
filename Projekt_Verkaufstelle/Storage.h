@@ -17,8 +17,8 @@ public:
 	Storage(const Storage &toCopy);
 	~Storage() = default;
 
-	bool addItem(LagerArtikel* toAdd); //hinzufügen zu Storageliste
-	bool addItem(Artikel* toAdd);
+	bool addItem(LagerArtikel * toAdd); //hinzufügen zu Storageliste
+	bool addItem(Artikel * toAdd);
 	bool removeItemFromStorage(LagerArtikel* toRemove); //Löschen aus StorageListe
 	bool isAvailable(Artikel* toCheck);  //übeprüfen ob in Liste vorhanden unabhängig von Menge
 

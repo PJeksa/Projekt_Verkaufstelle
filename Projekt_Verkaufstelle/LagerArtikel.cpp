@@ -18,6 +18,6 @@ void LagerArtikel::setBestand(int iBestand)
 string LagerArtikel::toString()
 {
 	string response = Artikel::toString();
-	response += "\nBestand" + this->getBestand();
+	response += "Bestand" + to_string(getBestand()) + "\n";
 	return response;
 }

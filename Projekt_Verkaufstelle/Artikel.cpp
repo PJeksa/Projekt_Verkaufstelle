@@ -61,12 +61,9 @@ string Artikel::toString()
 {
 	string response = "";
 	response += "Name: " + getName() + "\n";
-	response += "PreisEK: " + getPreisEK();
-	response += "\n";
-	response += "PreisVK: " + getPreisVK();
-	response += "\n";
-	response += "EAN: " + getEAN();
-	response += "\n";
+	response += "PreisEK: " + to_string(getPreisEK()) + "\n";
+	response += "PreisVK: " + to_string(getPreisVK()) + "\n";
+	response += "EAN: " + to_string(getEAN()) + "\n";
 	return response;
 }
 
