@@ -32,7 +32,7 @@ int main()
 
 	Storage l1 = Storage();
 
-	l1.addItem(&a1);
+	l1.addItem(a1);
 	l1.printOutStorage();
 
 

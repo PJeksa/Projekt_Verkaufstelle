@@ -19,13 +19,13 @@ public:
 	Artikel(const Artikel &toCopy);
 	virtual ~Artikel() = default;
 
-	string getName();
+	string getName() const;
 	void setName(string strName);
-	int getPreisEK();
+	int getPreisEK() const;
 	void setPreisEK(int iPreisEK);
-	int getPreisVK();
+	int getPreisVK() const;
 	void setPreisVK(int iPreisVK);
-	long getEAN();
+	long getEAN() const;
 	void setEAN(long lEAN);
 
 	string toString();

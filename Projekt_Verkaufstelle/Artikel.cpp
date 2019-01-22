@@ -16,7 +16,7 @@ Artikel::Artikel(const Artikel &toCopy)
 	lEAN = toCopy.lEAN;
 }
 
-string Artikel::getName()
+string Artikel::getName() const
 {
 	return strName;
 }
@@ -26,7 +26,7 @@ void Artikel::setName(string newName)
 	strName = newName;
 }
 
-int Artikel::getPreisEK()
+int Artikel::getPreisEK() const
 {
 	return iPreisEK;
 }
@@ -36,7 +36,7 @@ void Artikel::setPreisEK(int iPreisEK)
 	this->iPreisEK = iPreisEK;
 }
 
-int Artikel::getPreisVK()
+int Artikel::getPreisVK() const
 {
 	return iPreisVK;
 }
@@ -47,7 +47,7 @@ void Artikel::setPreisVK(int iPreisVK)
 }
 
 
-long Artikel::getEAN()
+long Artikel::getEAN() const
 {
 	return lEAN;
 }
