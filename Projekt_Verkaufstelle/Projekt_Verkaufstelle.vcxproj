@@ -157,7 +157,7 @@
     <ClCompile Include="LagerArtikel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Store.cpp" />
-    <ClCompile Include="Verkauf.cpp" />
+    <ClCompile Include="VerkaufEinkauf.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Artikel.h" />
@@ -166,7 +166,7 @@
     <ClInclude Include="Storage.h" />
     <ClInclude Include="LagerArtikel.h" />
     <ClInclude Include="Store.h" />
-    <ClInclude Include="Verkauf.h" />
+    <ClInclude Include="VerkaufEinkauf.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

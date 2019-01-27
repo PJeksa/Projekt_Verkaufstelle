@@ -2,7 +2,7 @@
 #include "Artikel.h"
 #include "Kunde.h"
 #include "Storage.h"
-#include "Verkauf.h"
+#include "VerkaufEinkauf.h"
 #include "LagerArtikel.h"
 
 /*
@@ -30,23 +30,30 @@ int main()
 	Artikel a2 = Artikel("Artikel2", 2, 3, 1234569);
 
 
-	Storage l1 = Storage();
+	Storage s1 = Storage();
 
-	l1.addItem(a1);
-	l1.printOutStorage();
-
-
-	LagerArtikel la1 = LagerArtikel("LagerArtikel1", 1, 2, 123456787, 0);
-	LagerArtikel l21 = LagerArtikel("LagerArtikel2", 2, 3, 123816787, 0);
+	s1.addItem(a1);
+	s1.printOutStorage();
 
 
+	LagerArtikel la1 = LagerArtikel("LagerArtikel1", 1, 2, 123456787);
+	LagerArtikel l21 = LagerArtikel("LagerArtikel2", 2, 3, 123816787);
 
-	l1.printOutStorage();
+	s1.addItem(la1);
 
 
-	Verkauf v = Verkauf(l1);
-	v.verkaufArtikel(la1, 0);
+	s1.printOutStorage();
+
+
+	VerkaufEinkauf v = VerkaufEinkauf(&s1,10);
+
+	s1.printOutStorage();
+	v.verkaufArtikel(la1, 4);
+	s1.printOutStorage();
 	
+	s1.addItem(a2);
+	s1.printOutStorage();
+
 
 	cout << "main" << endl;
 	cin.sync(); cin.get();

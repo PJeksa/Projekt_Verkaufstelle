@@ -9,19 +9,19 @@ using namespace std;
 class Store
 {
 
-private:
-	int money;
-	Storage lager;
+protected:
+	Storage * sStorage;
+	int iMoney;
 
 public:
 
 	Store() = delete;
-	Store(Storage lager, int money = 0);
+	Store(Storage * sStorage, int iMoney = 0);
 	virtual ~Store() = default;
 
 	int getMoney();
-	void setMoney(int money);
-	void addMoney(int money);
+	void setMoney(int iMoney);
+	void addMoney(int iMoney);
 };
 
 

@@ -11,7 +11,7 @@ private:
 
 public:
 	LagerArtikel() = delete;
-	LagerArtikel(string strName, int iPreisEK, int iPreisVK, long lEAN, int iBestand);
+	LagerArtikel(string strName, int iPreisEK, int iPreisVK, long lEAN, int iBestand = 1);
 	~LagerArtikel() = default;
 
 	int getBestand();

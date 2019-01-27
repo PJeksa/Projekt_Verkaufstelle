@@ -2,7 +2,6 @@
 #define _ARTIKEL_H
 
 #include <string>
-//#include "LagerArtikel.h"
 using namespace std;
 
 class Artikel

@@ -1,22 +1,22 @@
 #include "Store.h"
 
-Store::Store(Storage lager, int money)
+Store::Store(Storage * sStorage, int money)
 {
-	this->money = money;
-	this->lager = lager;
+	this->sStorage = sStorage;
+	this->iMoney = money;
 }
 
 int Store::getMoney()
 {
-	return this->money;
+	return this->iMoney;
 }
 
 void Store::setMoney(int money)
 {
-	this->money = money;
+	this->iMoney = money;
 }
 
 void Store::addMoney(int money)
 {
-	this->money = this->getMoney() + money;
+	this->iMoney = this->getMoney() + money;
 }

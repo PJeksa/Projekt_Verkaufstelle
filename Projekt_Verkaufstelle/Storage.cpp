@@ -72,7 +72,12 @@ void Storage::printOutStorage()
 
 	for (list<LagerArtikel>::iterator i = lagerList.begin(); i != lagerList.end(); i++)
 	{
-		cout << i->getName() << endl;
+		cout << i->getName()  << ", Bestand: " << i->getBestand() << endl;
 	}
 	cout << endl;
+}
+
+list<LagerArtikel>& Storage::getList()
+{
+	return lagerList;
 }

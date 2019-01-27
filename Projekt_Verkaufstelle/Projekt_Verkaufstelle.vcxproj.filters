@@ -21,9 +21,6 @@
     <ClCompile Include="Artikel.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Verkauf.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -36,15 +33,15 @@
     <ClCompile Include="Storage.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="VerkaufEinkauf.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kunde.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Artikel.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Verkauf.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Einkauf.h">
@@ -57,6 +54,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Storage.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VerkaufEinkauf.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
