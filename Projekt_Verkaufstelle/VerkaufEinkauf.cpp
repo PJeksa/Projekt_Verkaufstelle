@@ -21,7 +21,7 @@ void VerkaufEinkauf::verkaufArtikel(LagerArtikel &toSell,int menge)
 			}
 			else
 			{
-				//TODO: Menge um mindest lagermenge erweitern, sodass nicht nur die fehldene Anzahl eingekauft wird sondern auch Lager aufgefüllt wird.
+				//TODO: LagerArtikel um mindest lagermenge erweitern, sodass nicht nur die fehldene Anzahl eingekauft wird sondern auch Lager aufgefüllt wird.
 				bool einkaufErfolg = false;
 				int iToOrder = abs(selling->getBestand() - menge);
 				selling->setBestand(0);
